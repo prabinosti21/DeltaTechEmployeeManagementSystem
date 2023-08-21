@@ -11,8 +11,5 @@ import java.util.List;
 
 @Repository
 public interface AddressRepository extends JpaRepository<Address, Long> {
-    @Modifying
-    @Query(value = "delete from address where e_id=:id",nativeQuery = true)
-    public void deleteAddressIdByEmployeeId(Long id);
 
 }
