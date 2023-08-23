@@ -30,11 +30,13 @@ public class DeltaController {
             (@Valid @PathVariable("eid") Long eid){
         System.out.println("Getting employee details by employee Id");
         System.out.println("Line added by prabin laptop 1");
+        //prabin laptop2
         return ResponseEntity.status(202).body(deltaService.getEmployeeById(eid));
     }
     @DeleteMapping("/{eid}")
     public ResponseEntity<String>deleteEmployee(@Valid @PathVariable("eid") Long eid){
         System.out.println("Deleting employee details by getting employee Id");
+        System.out.println("Laptop 2 delete mapping");
         return ResponseEntity.status(203).body(deltaService.deleteEmployee(eid));
     }
     @PutMapping("/{eid}")
