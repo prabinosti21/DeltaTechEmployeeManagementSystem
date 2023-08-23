@@ -37,6 +37,7 @@ public class DeltaController {
     public ResponseEntity<String>deleteEmployee(@Valid @PathVariable("eid") Long eid){
         System.out.println("Deleting employee details by getting employee Id");
         System.out.println("Laptop 2 delete mapping");
+        //laptop 1 delete mapping
         return ResponseEntity.status(203).body(deltaService.deleteEmployee(eid));
     }
     @PutMapping("/{eid}")
