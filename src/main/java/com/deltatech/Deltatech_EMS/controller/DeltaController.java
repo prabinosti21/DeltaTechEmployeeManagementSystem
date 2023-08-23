@@ -28,10 +28,12 @@ public class DeltaController {
     @GetMapping("/ID/{eid}")
     public ResponseEntity<DeltaTech>getEmployeeById
             (@Valid @PathVariable("eid") Long eid){
+        System.out.println("Getting employee details by employee Id");
         return ResponseEntity.status(202).body(deltaService.getEmployeeById(eid));
     }
     @DeleteMapping("/{eid}")
     public ResponseEntity<String>deleteEmployee(@Valid @PathVariable("eid") Long eid){
+        System.out.println("Deleting employee details by getting employee Id");
         return ResponseEntity.status(203).body(deltaService.deleteEmployee(eid));
     }
     @PutMapping("/{eid}")
