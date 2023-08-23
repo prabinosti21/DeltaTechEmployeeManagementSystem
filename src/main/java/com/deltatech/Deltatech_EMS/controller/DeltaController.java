@@ -29,6 +29,7 @@ public class DeltaController {
     public ResponseEntity<DeltaTech>getEmployeeById
             (@Valid @PathVariable("eid") Long eid){
         System.out.println("Getting employee details by employee Id");
+        System.out.println("Line added by prabin laptop 1");
         return ResponseEntity.status(202).body(deltaService.getEmployeeById(eid));
     }
     @DeleteMapping("/{eid}")
